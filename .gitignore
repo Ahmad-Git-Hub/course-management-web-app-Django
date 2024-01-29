@@ -1,0 +1,82 @@
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Backup files # 
+*.bak 
+
+# Database files
+*.sqlite3
+db.sqlite3
+local_settings.py
+
+# Media and static files
+media/
+static/
+
+# Environments 
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 
+
+# IDE and text editor files
+.idea/
+.vscode/
+.vim/
+
+# Log files
+logs/
+*.log
+
+# Django-specific files
+*.log
+*.pot
+*.mo
+*.pyd
+*.pyi
+*.pydll
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.pth
+*.egg-info/
+*.egg
+*.dist-info/
+*.whl
+*.spyx
+*.pxd
+*.pxi
+*.ipynb_checkpoints/
+
+# Sphinx documentation files
+docs/_build/
+docs/api/
+docs/objects.inv
+
+# Coverage.py files
+.coverage
+.tox/
+.hypothesis/
+.nox/
+.pytest_cache/
+htmlcov/
+.direnv/
+
+# Dependency management files
+.lock-waste/
+.env
+.venv/
+env/
+bin/
+
