@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    
+    {% block extra_styles %}
+    {% endblock %}
+    <title>Continuous Teaching Al-Nahrain University</title>
+</head>
+<body>
+    <header>
+      <h1>Continuous Teaching</h1>
+    </header>
+    <nav class="nav">
+      <a class="home" href="{% url 'core-home' %}">Home</a>                       
+      <a class="courses" href="{% url 'core-course' %}">Courses</a>
+      <a class="lecturer" href="{% url 'core-lecturer' %}">Lecturer</a>
+      <a class="login" href="http://127.0.0.1:8000/admin/">Login</a>
+    </nav>    
+
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+      <p>&copy; 2024 Al-Nahrain University College Of Science Continuous Teaching . All rights reserved.</p>
+    </footer>
+</body>
+</html>

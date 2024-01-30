@@ -1,0 +1,38 @@
+{% extends "core/index.html" %} 
+{% block content %}
+
+<div class="search-section">
+    <form method="GET">
+        <label for="lecturer_name">Search by name:</label>
+        <input type="text" id="lecturer_name" name="lecturer_name" />
+        <button type="submit" class="search-button">
+            <span class="button-text">Search</span>
+        </button>
+        <button type="button" class="reset-button">
+            <a href="{% url 'core-lecturer' %}"><span class="button-text">Reset</span></a>
+        </button>
+    </form>
+</div>
+<div class="sorting-lecturer">
+    <p style="display: inline-block;">SORT BY</p>
+    <a class="link" href="{% url 'core-lecturer' %}?sort_by=lecturer_name">Name</a>
+    <a class="link" href="{% url 'core-lecturer' %}?sort_by=title_rank">Title</a>
+    <a class="link" href="{% url 'core-lecturer' %}?sort_by=qualification">Qualification</a>
+</div>
+
+{% for lecturer in lecturers %}
+<div class="lecturer-container">
+    <div class="lecturer-name-div">
+        <p>{{ lecturer.lecturer_name }}</p>
+    </div>
+    <div class="lecturer-info-div">
+        <p>
+            <strong>cv_link:</strong><a href="{{ lecturer.cv_link }}">{{lecturer.cv_link}}</a>
+        </p>
+        <p><strong>gender:</strong> {{ lecturer.get_gender_display }}</p>
+        <p><strong>title:</strong> {{ lecturer.get_title_rank_display }}</p>
+
+        <p><strong>qualification:</strong> {{ lecturer.qualification }}</p>
+    </div>
+</div>
+{% endfor %} {% endblock content %}

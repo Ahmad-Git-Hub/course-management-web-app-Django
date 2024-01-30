@@ -1,0 +1,206 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1fffa;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #213170;
+}
+
+header h1 {
+  color: rgb(225, 225, 246);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0b153d;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 1px 5px 20px #72b6ff;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: inline-block;
+}
+
+.nav a:hover {
+  background-color: #41b5b3;
+  color: white;
+}
+
+.nav-item.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.footer {
+  background-color: #0b153d;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.search-section {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+}
+
+.search-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search-section input {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+.search-button,
+.reset-button {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+  }
+  color: #0b153d;
+}
+
+.search-section:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sorting-lecturer {
+  margin: 10px;
+}
+
+.link {
+  text-decoration: none;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+/* ______________________________lecturer.html________________________________________________ */
+
+.lecturer-container {
+  /* display: flex; */
+  display: inline-block;
+  max-width: 400px;
+  max-height: fit-content;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.lecturer-name-div {
+  padding: 10px;
+  background-color: #0b153d;
+  max-height: 50px;
+  text-align: center;
+}
+
+.lecturer-name-div p {
+  margin: 0;
+  font-size: 14px;
+  display: inline;
+  padding-block: 60px;
+  color: rgb(255, 255, 255);
+}
+
+.lecturer-info-div {
+  flex: 2;
+  padding: 10px;
+  background-color: #213170;
+  color: whitesmoke;
+  a {
+    color: #d0eafc;
+    text-decoration: none;
+  }
+}
+
+/* ______________________________course.html________________________________________________ */
+
+/* Course container styling */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Image container styling */
+.image-container {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container img {
+  width: 80%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.course_name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.course-details {
+  text-align: center;
+}
+
+.description {
+  flex: 1;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: #d0eafc;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.details-section {
+  margin-bottom: 10px;
+}
+
+.course_description a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.course_description a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .course-container {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
