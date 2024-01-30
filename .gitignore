@@ -1,41 +1,37 @@
-
 # Django #
 *.log
 *.pot
 *.pyc
 __pycache__
-db.sqlite3
-media
+media/
 
-# Backup files # 
-*.bak 
+# Backup files #
+*.bak
 
 # Database files
 *.sqlite3
 db.sqlite3
 local_settings.py
 
-# Media and static files
-media/
-static/
-
 # Environments 
-.env 
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # IDE and text editor files
 .idea/
 .vscode/
 .vim/
 
+# Ignore the "dist" folder
+dist/
+
 # Log files
 logs/
-*.log
 
 # Django-specific files
 *.log
@@ -75,8 +71,3 @@ htmlcov/
 
 # Dependency management files
 .lock-waste/
-.env
-.venv/
-env/
-bin/
-
