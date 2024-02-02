@@ -2,28 +2,17 @@
 
 <div class="container">
   <div class="image-container">
-    <h2 class="course_name">{{ course.course_name }}</h2>
     <img src="{{ course.poster }}" alt="{{ course.course_name }} Poster" />
   </div>
-  <div class="description">
-    <div class="one">
-      <p class="course_description">
-        <strong>Description:</strong> {{ course.description }}
-      </p>
-    </div>
-    <div class="two">
-      <p class="course_prerequisites">
-        <strong>Prerequisites:</strong> {{ course.prerequisites }}
-      </p>
-    </div>
-    <div class="three">
-      <p class="course_date">
-        <strong>Starting Date:</strong> {{ course.starting_date }}
-      </p>
-      <p class="duration"><strong>Duration (days):</strong> {{ course.duration_days }}</p>
-      <p class="price"><strong>Price: </strong>{{ course.price }} IQD</p>
-      <p class="price"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
-    </div>
+  <div class="description-container">
+    <h2 class="course-name">{{ course.course_name }}</h2>
+    <p class="course-prerequisites"><strong>Prerequisites:</strong> {{ course.prerequisites }}</p>
+    <p class="course-date"><strong>Starting Date:</strong> {{ course.starting_date }}</p>
+    <p class="course-duration"><strong>Duration (days):</strong> {{ course.duration_days }}</p>
+    <p class="course-price"><strong>Price: </strong>{{ course.price }} IQD</p>
+    <p class="course-lecturer"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
+    <p class="course-description"><strong>Description:</strong> {{ course.description }}</p>
+    
   </div>
 </div>
 {% endfor %} {% endblock content %}

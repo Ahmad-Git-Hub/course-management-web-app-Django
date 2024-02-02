@@ -166,16 +166,9 @@ header h1 {
   border-radius: 5px;
 }
 
-.course_name {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
 
-.course-details {
-  text-align: center;
-}
 
-.description {
+.description-container {
   flex: 1;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -184,18 +177,11 @@ header h1 {
   padding: 10px;
 }
 
-.details-section {
+.course_name {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.course_description a {
-  text-decoration: none;
-  color: #3498db;
-}
-
-.course_description a:hover {
-  text-decoration: underline;
-}
 
 /* Responsiveness */
 @media (max-width: 768px) {
