@@ -16,14 +16,18 @@ header h1 {
 .nav {
   display: flex;
   justify-content: space-around;
-  background-color: #0b153d;
+  /* background-color: #0b153d; */
+  background-color: seashell;
   padding: 10px;
   margin-bottom: 20px;
-  box-shadow: 1px 5px 20px #72b6ff;
+  box-shadow: 1px 5px 10px #72b6ff;
+  
 }
 
 .nav a {
   color: white;
+  color: #213170;
+
   text-decoration: none;
   padding: 8px 16px;
   display: inline-block;
@@ -99,15 +103,16 @@ header h1 {
 /* ______________________________lecturer.html________________________________________________ */
 
 .lecturer-container {
-  /* display: flex; */
-  display: inline-block;
-  max-width: 400px;
-  max-height: fit-content;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-right: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  font-size: 14px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
 .lecturer-name-div {
@@ -138,55 +143,49 @@ header h1 {
 
 /* ______________________________course.html________________________________________________ */
 
-/* Course container styling */
-.course-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Image container styling */
-.image-container {
-  flex: 1 1 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.image-container img {
-  width: 80%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-
-
-.description-container {
-  flex: 1;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  background-color: #d0eafc;
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.course_name {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-
 /* Responsiveness */
 @media (max-width: 768px) {
   .course-container {
     flex-wrap: nowrap;
     width: 100%;
   }
+}
+
+/* styles.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  font-size: 14px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #213170;
+}
+
+.image-container img {
+  max-width: 40%;
+  height: auto;
+  /* border-radius: 400px; */
+}
+
+
+.course-name {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.course-description,
+.course-prerequisites,
+.course-date,
+.course-duration,
+.course-price,
+.course-lecturer {
+  color: #ccc;
+  margin-bottom: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

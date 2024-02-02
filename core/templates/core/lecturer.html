@@ -20,19 +20,19 @@
     <a class="link" href="{% url 'core-lecturer' %}?sort_by=qualification">Qualification</a>
 </div>
 
-{% for lecturer in lecturers %}
 <div class="lecturer-container">
+{% for lecturer in lecturers %}
+<div class="grid-item">
     <div class="lecturer-name-div">
         <p>{{ lecturer.lecturer_name }}</p>
     </div>
     <div class="lecturer-info-div">
-        <p>
-            <strong>cv_link:</strong><a href="{{ lecturer.cv_link }}">{{lecturer.cv_link}}</a>
-        </p>
+        <p><strong>cv: </strong><a href="{{ lecturer.cv_link }}">See full information</a></p>
         <p><strong>gender:</strong> {{ lecturer.get_gender_display }}</p>
         <p><strong>title:</strong> {{ lecturer.get_title_rank_display }}</p>
-
         <p><strong>qualification:</strong> {{ lecturer.qualification }}</p>
     </div>
 </div>
-{% endfor %} {% endblock content %}
+{% endfor %}
+</div>
+ {% endblock content %}

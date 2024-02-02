@@ -1,18 +1,22 @@
-{% extends "core/index.html" %} {% block content %} {% for course in courses %}
+{% extends "core/index.html" %}
 
-<div class="container">
-  <div class="image-container">
-    <img src="{{ course.poster }}" alt="{{ course.course_name }} Poster" />
+{% block content %}
+  <div class="grid-container">
+    {% for course in courses %}
+      <div class="grid-item">
+        <div class="image-container">
+          <img src="{{ course.poster }}" alt="{{ course.course_name }} Poster" />
+        </div>
+        <div class="description-container">
+          <h2 class="course-name">{{ course.course_name }}</h2>
+          <p class="course-prerequisites"><strong>Prerequisites:</strong> {{ course.prerequisites }}</p>
+          <p class="course-date"><strong>Starting Date:</strong> {{ course.starting_date }}</p>
+          <p class="course-duration"><strong>Duration (days):</strong> {{ course.duration_days }}</p>
+          <p class="course-price"><strong>Price: </strong>{{ course.price }} IQD</p>
+          <p class="course-lecturer"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
+          <p class="course-description"><strong>Description:</strong> {{ course.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
   </div>
-  <div class="description-container">
-    <h2 class="course-name">{{ course.course_name }}</h2>
-    <p class="course-prerequisites"><strong>Prerequisites:</strong> {{ course.prerequisites }}</p>
-    <p class="course-date"><strong>Starting Date:</strong> {{ course.starting_date }}</p>
-    <p class="course-duration"><strong>Duration (days):</strong> {{ course.duration_days }}</p>
-    <p class="course-price"><strong>Price: </strong>{{ course.price }} IQD</p>
-    <p class="course-lecturer"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
-    <p class="course-description"><strong>Description:</strong> {{ course.description }}</p>
-    
-  </div>
-</div>
-{% endfor %} {% endblock content %}
+{% endblock content %}
