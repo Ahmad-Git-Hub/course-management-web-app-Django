@@ -104,41 +104,46 @@ header h1 {
 
 .lecturer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 10px;
   font-size: 14px;
 }
 
 .grid-item {
-  border: 1px solid #ccc;
   padding: 10px;
-  text-align: center;
+  text-align: center;  
+  border-radius: 5px;
+  background-color: #eee9e9;
+  transition: all 1s;
+}
+.grid-item:hover {
+  box-shadow: 2px 2px 10px #3ae1ff;
 }
 
 .lecturer-name-div {
   padding: 10px;
-  background-color: #0b153d;
+  background-color: #EBDBF6;
   max-height: 50px;
   text-align: center;
+  border-radius: 5px;
+  color: #213170;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
 }
 
-.lecturer-name-div p {
-  margin: 0;
-  font-size: 14px;
-  display: inline;
-  padding-block: 60px;
-  color: rgb(255, 255, 255);
-}
+
 
 .lecturer-info-div {
   flex: 2;
   padding: 10px;
-  background-color: #213170;
+  background-color: #5191CE;
   color: whitesmoke;
   a {
     color: #d0eafc;
     text-decoration: none;
   }
+  border-radius: 0px;
 }
 
 /* ______________________________course.html________________________________________________ */
@@ -159,12 +164,7 @@ header h1 {
   font-size: 14px;
 }
 
-.grid-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-  background-color: #213170;
-}
+
 
 .image-container img {
   max-width: 40%;
@@ -175,8 +175,9 @@ header h1 {
 
 .course-name {
   font-size: 1.2em;
-  color: #ccc;
+  color: #213170;
   margin-bottom: 10px;
+  background-color: #EBDBF6;
 }
 
 .course-description,
@@ -185,7 +186,7 @@ header h1 {
 .course-duration,
 .course-price,
 .course-lecturer {
-  color: #ccc;
+  color:  #0b153d;
   margin-bottom: 8px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
