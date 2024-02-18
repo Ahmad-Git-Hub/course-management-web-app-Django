@@ -9,12 +9,12 @@
         </div>
         <div class="description-container">
           <h2 class="course-name">{{ course.course_name }}</h2>
+          <p class="course-lecturer"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
+          <p class="course-description"><strong>Description:</strong> {{ course.description }}</p>
           <p class="course-prerequisites"><strong>Prerequisites:</strong> {{ course.prerequisites }}</p>
           <p class="course-date"><strong>Starting Date:</strong> {{ course.starting_date }}</p>
           <p class="course-duration"><strong>Duration (days):</strong> {{ course.duration_days }}</p>
           <p class="course-price"><strong>Price: </strong>{{ course.price }} IQD</p>
-          <p class="course-lecturer"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
-          <p class="course-description"><strong>Description:</strong> {{ course.description }}</p>
         </div>
       </div>
     {% endfor %}
