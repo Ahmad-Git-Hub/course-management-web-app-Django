@@ -2,6 +2,7 @@
 
 {% block content %}
 
+
 <div class="search-section">
     <form method="GET">
         <label for="lecturer_name">Search by name:</label>
@@ -14,6 +15,7 @@
         </button>
     </form>
 </div>
+
 <div class="sorting-lecturer">
     <p style="display: inline-block;">SORT BY</p>
     <a class="link" href="{% url 'core-lecturer' %}?sort_by=lecturer_name">Name</a>
@@ -21,19 +23,23 @@
     <a class="link" href="{% url 'core-lecturer' %}?sort_by=qualification">Qualification</a>
 </div>
 
-<div class="lecturer-container">
-{% for lecturer in lecturers %}
-<div class="grid-item">
-    <div class="lecturer-name-div">
-        <p>{{ lecturer.lecturer_name }}</p>
+{% if lecturers %}
+    <div class="lecturer-container">
+    {% for lecturer in lecturers %}
+    <div class="grid-item">
+        <div class="lecturer-name-div">
+            <p>{{ lecturer.lecturer_name }}</p>
+        </div>
+        <div class="lecturer-info-div">
+            <p><strong>cv: </strong><a href="{{ lecturer.cv_link }}">See full information</a></p>
+            <p><strong>gender:</strong> {{ lecturer.get_gender_display }}</p>
+            <p><strong>title:</strong> {{ lecturer.get_title_rank_display }}</p>
+            <p><strong>qualification:</strong> {{ lecturer.qualification }}</p>
+        </div>
     </div>
-    <div class="lecturer-info-div">
-        <p><strong>cv: </strong><a href="{{ lecturer.cv_link }}">See full information</a></p>
-        <p><strong>gender:</strong> {{ lecturer.get_gender_display }}</p>
-        <p><strong>title:</strong> {{ lecturer.get_title_rank_display }}</p>
-        <p><strong>qualification:</strong> {{ lecturer.qualification }}</p>
+    {% endfor %}
     </div>
-</div>
-{% endfor %}
-</div>
+{% else %}
+  <p>No lecturer found for the given name.</p>
+{% endif %}
  {% endblock content %}
