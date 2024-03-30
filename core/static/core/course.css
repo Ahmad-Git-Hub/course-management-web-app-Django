@@ -1,0 +1,84 @@
+/* ______________________________course.html________________________________________________ */
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  :root {
+    --primary-color: #36f4d8; /* Primary text and accent color */
+    --secondary-color: #579bd7; /* Secondary text color */
+    --background-color: #213170; /* Background color for description container */
+    --border-color: #ddd; /* Border color */
+    --box-shadow-color: rgba(0, 0, 0, 0.1); /* Box shadow color */
+  }
+  
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Course Card */
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px var(--box-shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  /* Course Image */
+  .image-container img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Course Description */
+  .description-container {
+    padding: 15px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    flex: 1;
+    flex-grow: 1;
+  }
+  
+  /* Course Details */
+  .course-name {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em; 
+  }
+  
+  .course-prerequisites,
+  .course-date,
+  .course-duration,
+  .course-price,
+  .course-lecturer,
+  .course-description {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .course-price {
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

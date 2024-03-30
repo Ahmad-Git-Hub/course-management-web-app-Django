@@ -1,0 +1,49 @@
+/* ______________________________lecturer.html________________________________________________ */
+
+.lecturer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .grid-item {
+    padding: 10px;
+    text-align: center;  
+    border-radius: 5px;
+    background-color: #eee9e9;
+    transition: box-shadow 1s;
+  }
+  .grid-item:hover {
+    box-shadow: 2px 2px 10px #3ae1ff;
+  }
+  
+  .lecturer-name-div {
+    padding: 10px;
+    background-color: #EBDBF6;
+    max-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: #213170;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+  }
+  
+  
+  .lecturer-info-div {
+    flex: 2;
+    padding: 10px;
+    background-color: #213170;
+    color: whitesmoke;
+    a {
+      color: #d0eafc;
+      text-decoration: none;
+    }
+    border-radius: 0px;
+  }
+
+  .sorting-lecturer {
+    margin: 10px;
+  }
+  
