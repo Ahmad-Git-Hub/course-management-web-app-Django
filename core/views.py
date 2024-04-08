@@ -8,11 +8,11 @@ def home(request):
 
 
 def course(request):
-    lecturer_name = request.GET.get('lecturer_name', None) 
+    course_name = request.GET.get('course_name', None) 
     today = date.today() 
     courses = Course.objects.filter(starting_date__gt=today)  
-    if lecturer_name:
-        courses = courses.filter(lecturer__lecturer_name__icontains=lecturer_name) 
+    if course_name:
+        courses = courses.filter(course_name__icontains=course_name) 
     context = {'courses': courses}
     return render(request, 'core/course.html', context)
 
