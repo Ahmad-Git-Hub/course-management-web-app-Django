@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.course-description, .course-prerequisites, .course-date, .course-duration, .course-price {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: blueviolet;
+}
+
+.course-price {
+    font-size: 18px;
+    color: #008000;
+}

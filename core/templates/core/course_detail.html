@@ -1,0 +1,10 @@
+{% extends "core/index.html" %}
+{% block content %}
+    <h2>{{ course.course_name }}</h2>
+    <p><strong>Lecturer:</strong> {{ course.lecturer }}</p>
+    <p class="course-description"><strong>Description:</strong> {{ course.description }}</p>
+    <p class="course-prerequisites"><strong>Prerequisites:</strong> {{ course.prerequisites }}</p>
+    <p class="course-date"><strong>Starting Date:</strong> {{ course.starting_date }}</p>
+    <p class="course-duration"><strong>Duration (days):</strong> {{ course.duration_days }}</p>
+    <p class="course-price"><strong>Price: </strong>{{ course.price }} IQD</p>
+{% endblock content %}
