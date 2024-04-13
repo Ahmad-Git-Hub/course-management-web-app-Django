@@ -31,6 +31,7 @@ class Course(models.Model):
         max_digits=7, decimal_places=0, blank=True, null=True)
     poster = models.CharField(max_length=255, blank=True)
     lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.course_name} ({self.course_id})"
