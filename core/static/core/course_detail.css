@@ -1,28 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0; 
+}
+
+.course-card {
+  display: flex; 
+  margin: 20px auto;
+  width: 80%; 
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.course-card img {
+  width: 30%; 
+  object-fit: cover;
+}
+
+.course-details {
+  padding: 20px;
 }
 
 h2 {
-    color: #333;
-    font-size: 24px;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-p {
-    color: #666;
-    font-size: 16px;
+.course-info,
+.course-description,
+.course-prerequisites {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.course-description, .course-prerequisites, .course-date, .course-duration, .course-price {
-    margin-top: 10px;
-    line-height: 1.6;
-    color: blueviolet;
+.course-price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.course-price {
-    font-size: 18px;
-    color: #008000;
+.price {
+  font-size: 18px;
+  color: #008000;
+}
+
+button {
+  background-color: #008000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
