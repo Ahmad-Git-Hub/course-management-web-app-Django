@@ -10,7 +10,7 @@ class LecturerAdmin(admin.ModelAdmin):
 
 class CourseAdmin(admin.ModelAdmin):
 
-    list_display = ['course_name', 'starting_date', 'price', 'creation_date', 'lecturer', 'days_since_creation']
+    list_display = ['course_id', 'course_name', 'starting_date', 'price', 'creation_date','is_approved', 'lecturer', 'days_since_creation']
 
 
     def get_queryset(self, request):

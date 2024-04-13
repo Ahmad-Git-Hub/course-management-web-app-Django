@@ -72,6 +72,15 @@
   font-weight: bold;
   color: var(--secondary-color);
 }
+.warning {
+  padding: 20px;
+  background-color: #164d57; 
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px; 
+  font-size: 1.2em; 
+  text-align: center;
+ }
 
 @media screen and (max-width: 768px) {
   .grid-container {

@@ -7,15 +7,16 @@ def home(request):
     return render(request, 'core/index.html')
 
 
+
 def course_detail(request, course_id):
-    course = get_object_or_404(Course, course_id=course_id)
+    course = get_object_or_404(Course, course_id=course_id, is_approved=True)
     context = {'course': course, 'current_page': 'course_detail'}
     return render(request, 'core/course_detail.html', context)
 
 def course(request):
     course_name = request.GET.get('course_name', None) 
     today = date.today() 
-    courses = Course.objects.filter(starting_date__gt=today)  
+    courses = Course.objects.filter(starting_date__gt=today, is_approved=True)  
     if course_name:
         courses = courses.filter(course_name__icontains=course_name) 
     context = {'courses': courses, 'current_page': 'course'}
