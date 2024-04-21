@@ -11,7 +11,15 @@ class LecturerAdmin(admin.ModelAdmin):
 class CourseAdmin(admin.ModelAdmin):
 
     list_display = ['course_id', 'course_name', 'starting_date', 'price', 'creation_date','is_approved', 'lecturer', 'days_since_creation']
+    actions = ['approve_courses', 'disapprove_courses']
 
+    def approve_courses(self, request, queryset):
+        queryset.update(is_approved=True)
+    approve_courses.short_description = "Approve selected courses"
+
+    def disapprove_courses(self, request, queryset):
+        queryset.update(is_approved=False)
+    disapprove_courses.short_description = "Disapprove selected courses"
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)

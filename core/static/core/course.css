@@ -31,7 +31,7 @@
   overflow: hidden;
   box-shadow: 0 2px 5px var(--box-shadow-color);
   transition: transform 0.2s, box-shadow 0.2s;
-  height: 350px; 
+  height: 300px; 
 }
 
 /* Course Image */
@@ -81,6 +81,8 @@
   font-size: 1.2em; 
   text-align: center;
  }
+
+
 
 @media screen and (max-width: 768px) {
   .grid-container {
