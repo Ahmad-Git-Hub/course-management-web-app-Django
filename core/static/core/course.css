@@ -19,6 +19,8 @@
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
+  box-shadow: 1px 5px 10px #72b6ff;
+
 }
 
 /* Course Card */
@@ -30,8 +32,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px var(--box-shadow-color);
-  transition: transform 0.2s, box-shadow 0.2s;
-  height: 300px; 
+  transition: transform 0.2s, box-shadow 0.2s;  height: 350px; 
 }
 
 /* Course Image */
@@ -82,6 +83,51 @@
   text-align: center;
  }
 
+ .search-section {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+}
+
+.search-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search-section input {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+.search-button,
+.reset-button {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+  }
+  color: #0b153d;
+}
+
+.search-section:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+  text-decoration: none;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
 
 
 @media screen and (max-width: 768px) {

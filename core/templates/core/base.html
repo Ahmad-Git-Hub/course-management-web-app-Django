@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Teaching - Al-Nahrain University</title>
+    <link rel="stylesheet" href="{% static 'core/base.css' %}">
+    {% if current_page == 'course_detail' %}
+        <link rel="stylesheet" href="{% static 'core/course_detail.css' %}">
+    {% elif current_page == 'lecturer' %}
+        <link rel="stylesheet" href="{% static 'core/lecturer.css' %}">
+    {% elif current_page == 'course' %}
+        <link rel="stylesheet" href="{% static 'core/course.css' %}">
+    {% elif current_page == 'about' %}
+        <link rel="stylesheet" href="{% static 'core/about.css' %}">
+    {% elif current_page == 'home' %}
+        <link rel="stylesheet" href="{% static 'core/home.css' %}">
+    {% endif %}
+</head>
+<body>
+    <header>
+        <h1>Continuous Teaching</h1>
+    </header>
+    <nav class="nav">
+        <a class="home" href="{% url 'core-home' %}">Home</a>
+        <a class="courses" href="{% url 'core-course' %}">Courses</a>
+        <a class="lecturer" href="{% url 'core-lecturer' %}">Lecturer</a>
+        <a class="about" href="{% url 'core-about' %}">About</a>
+        <a class="login" href="http://127.0.0.1:8000/admin/">Login</a>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <p>© 2024 Al-Nahrain University College of Science Continuous Teaching. All rights reserved.</p>
+    </footer>
+</body>
+</html>

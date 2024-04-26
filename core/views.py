@@ -4,9 +4,12 @@ from .models import Lecturer, Course
 
 
 def home(request):
-    return render(request, 'core/index.html')
+    context = {'current_page': 'home'}
+    return render(request, 'core/home.html', context)
 
-
+def about(request):
+    context = {'current_page': 'about'}
+    return render(request, 'core/about.html', context)
 
 def course_detail(request, course_id):
     course = get_object_or_404(Course, course_id=course_id, is_approved=True)
