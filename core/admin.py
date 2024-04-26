@@ -32,7 +32,7 @@ class CourseAdmin(admin.ModelAdmin):
     def get_form(self, request, obj=None, **kwargs):
     # Customize the form based on the user's permissions
         if not request.user.is_superuser:
-            self.exclude = ('lecturer', 'creation_date')
+            self.exclude = ('lecturer', 'creation_date', 'is_approved')
         else:
             self.exclude = ()
         return super().get_form(request, obj, **kwargs)
