@@ -17,24 +17,26 @@
     {% elif current_page == 'home' %}
         <link rel="stylesheet" href="{% static 'core/home.css' %}">
     {% endif %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
 </head>
 <body>
     <header>
         <h1>Continuous Teaching</h1>
     </header>
     <nav class="nav">
-        <a class="home" href="{% url 'core-home' %}">Home</a>
-        <a class="courses" href="{% url 'core-course' %}">Courses</a>
-        <a class="lecturer" href="{% url 'core-lecturer' %}">Lecturer</a>
-        <a class="about" href="{% url 'core-about' %}">About</a>
-        <a class="login" href="http://127.0.0.1:8000/admin/">Login</a>
+        <a class="home" href="{% url 'core-home' %}"><i class="fas fa-home"></i> Home</a>
+        <a class="courses" href="{% url 'core-course' %}"><i class="fas fa-book"></i> Courses</a>
+        <a class="lecturer" href="{% url 'core-lecturer' %}"><i class="fas fa-chalkboard-teacher"></i> Lecturer</a> 
+        <a class="about" href="{% url 'core-about' %}"><i class="fas fa-info-circle"></i> About</a>
+        <a class="login" href="http://127.0.0.1:8000/admin/"><i class="fas fa-sign-in-alt"></i> Login</a>
     </nav>
 
     {% block content %}
     {% endblock %}
 
     <footer class="footer">
-        <p>© 2024 Al-Nahrain University College of Science Continuous Teaching. All rights reserved.</p>
+        <p>© 2024 Al-Nahrain University College of Science Computer Science Departement. All rights reserved.</p>
     </footer>
 </body>
 </html>

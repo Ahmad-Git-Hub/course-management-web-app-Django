@@ -17,13 +17,14 @@ header {
   text-align: center;
   padding: 1rem;
   font-size: 2rem;
-  border-bottom: 5px solid #002855; 
+  border-bottom: 5px solid #664f7f; 
 }
 
 .nav {
   background-color: #002855; 
   text-align: center;
   padding: 1rem;
+  border-bottom: 5px solid #664f7f; 
 }
 
 .nav a {
@@ -32,6 +33,10 @@ header {
   margin: 0 1rem;
   font-size: 1.2rem;
   transition: color 0.3s;
+}
+.nav a i {
+  margin-right: 0.5rem;
+  color: #2ee674;
 }
 
 .nav a:hover {
@@ -54,6 +59,9 @@ header {
   background-color: #002855; 
   color: #ecf0f1; 
   font-size: 0.9rem;
+  border-top: 5px solid #664f7f; 
+  border-bottom: 5px solid #664f7f; 
+
 }
 
 

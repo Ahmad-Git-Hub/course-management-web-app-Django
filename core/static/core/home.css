@@ -1,61 +1,65 @@
-.about-section {
-    background: linear-gradient(to bottom, #f7f7f7, #e0e0e0);
-    color: #213170;
-    padding: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #001f3f;
+    color: #fff;
     text-align: center;
-    box-shadow: 1px 5px 10px #72b6ff;
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: 5px solid #32ff27;
 }
 
-.about-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    color: #36f4d8;
+.section-one {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-.about-section p {
-    max-width: 600px;
-    margin: auto;
-    font-size: 1.1em;
+.section-one h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.team-members {
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-    margin-top: 40px;
+.section-one-paragraph {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
 }
 
-.member {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center; 
-}
-
-.member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #b0d9f0;
-    margin-bottom: 20px;
-}
-
-.member h3 {
-    color: #36f4d8;
-    font-size: 1.2rem;
-}
-
-.member p {
-    color: #213170;
-}
-
-a.mailto-link {
-    color: #007bff; 
+.learn-more-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2ee674;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-a.mailto-link:hover {
-    color: #0056b3;
+.learn-more-btn:hover {
+    background-color: #1ca25e;
+}
+
+.section-two img {
+    width: 100%;
+    max-height: 200px; 
+    display: block;
+    object-fit: cover;
+}
+
+
+
+.section-three {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.section-three h3 {
+    font-size: 1.5rem;
+    color: #333;
 }
