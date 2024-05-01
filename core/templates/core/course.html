@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% block content %}
+{% load static %}
 
 <div class="search-section">
   <form method="GET">
@@ -16,10 +17,10 @@
 {% if courses %}
   <div class="grid-container">
     {% for course in courses %}
-    <a href="{% url 'core-course-detail' course.course_id %}">
+    <a class= "link-to-course" href="{% url 'core-course-detail' course.course_id %}">
       <div class="grid-item">
         <div class="image-container">
-          <img src="{{ course.poster }}" alt="{{ course.course_name }} Poster" />
+          <img src="{% static 'core/images/education.png' %}" alt="{{ course.course_name }} Poster" />
         </div>
         <div class="description-container">
           <h2 class="course-name">{{ course.course_name }}</h2>

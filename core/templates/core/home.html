@@ -4,19 +4,34 @@
 
     <section class="section-one">
       <h2 class="header">Learn. Achieve. Thrive with us.</h2>
-      <p class="section-one-paragraph"> We are the continuous teaching faculty at Al-Nahrain university 
+      <p class="section-one-paragraph">
+       We are The Continuous Teaching Unit at Al-Nahrain university 
        College Of Science Department. We aim to share our
        knowledge and skills with students, employees, and anyone else 
        who wants to develop and improve their skills.</p>
-      <a href="{% url 'core-course' %}" class="learn-more-btn">See available courses!</a> 
+      <a href="{% url 'core-course' %}" class="see-available-courses">See available courses!</a> 
     </section>
   
     <section class="section-two">
-      <img src=https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D>
+      <img src=https://sc.nahrainuniv.edu.iq/en/assets/img/1.jpg>
     </section>
   
     <section class="section-three">
       <h3>You will enjoy learning from our top instructor in the continuing teaching faculty.</h3>
     </section>
-    
+
+    <div class="card-container">
+      <div class="card">
+          <h2>Location</h2>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Address</p>
+          <span>Iraq - Baghdad - Jadriyah</span>
+      </div>
+      <div class="card">
+          <h2>Email</h2>
+          <i class="fas fa-envelope"></i>
+          <p>E-mail</p>
+          <span>info@nahrainuniv.edu.iq</span>
+      </div>
+  </div>  
 {% endblock content %}
