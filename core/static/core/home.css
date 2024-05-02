@@ -6,17 +6,17 @@
 
 .section-one {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ccc;
-    border-radius: 8px;
     text-align: center;
 }
 
-.header {
+h2 {
     font-size: 28px;
     color: #333;
     margin-bottom: 10px;
 }
+
 
 .section-one-paragraph {
     font-size: 16px;
@@ -41,9 +41,11 @@
   
 .section-two img {
     width: 100%;
-    max-height: 300px; 
+    max-height: 500px; 
     display: block;
     object-fit: cover;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .section-three {
@@ -65,6 +67,7 @@
 
 .card {
     flex: 1;
+    margin: 10px;
     background-color: #f9f9f9;
     padding: 20px;
     border: 1px solid #ddd;

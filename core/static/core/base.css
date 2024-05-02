@@ -11,18 +11,33 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background-color: #001f3f; 
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 2rem;
-  border-bottom: 5px solid #664f7f; 
+.header {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  padding: 20px;
+  background-color: #002855;
 }
 
+.header h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.header .logo {
+  width: 130px;
+  height: auto;
+}
+
+.logo {
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+
 .nav {
-  background-color: #002855; 
-  text-align: center;
+  background-color: #456588; 
+  text-align: left;
   padding: 1rem;
   border-bottom: 5px solid #664f7f; 
 }
@@ -56,7 +71,7 @@ header {
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: #002855; 
+  background-color: #456588; 
   color: #ecf0f1; 
   font-size: 0.9rem;
   border-top: 5px solid #664f7f; 

@@ -21,9 +21,10 @@
 
 </head>
 <body>
-    <header>
+    <div class="header">
         <h1>Continuous Teaching</h1>
-    </header>
+        <img class="logo" src="{% static 'core/images/logo-rm-bg.png' %}" alt="Al-Nahrain university">
+    </div>
     <nav class="nav">
         <a class="home" href="{% url 'core-home' %}"><i class="fas fa-home"></i> Home</a>
         <a class="courses" href="{% url 'core-course' %}"><i class="fas fa-book"></i> Courses</a>
