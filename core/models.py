@@ -51,7 +51,7 @@ class Student(models.Model):
         choices=PERSON_TYPE_CHOICES,
         default='OT',
     )
-    courses = models.ManyToManyField(Course, blank=True)
+    courses = models.ManyToManyField(Course, blank=False)
 
     def __str__(self):
         return self.name

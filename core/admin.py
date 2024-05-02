@@ -1,6 +1,6 @@
 import datetime
 from django.contrib import admin
-from .models import Lecturer, Course
+from .models import Lecturer, Course, Student
 
 class LecturerAdmin(admin.ModelAdmin):
     list_display = ['lecturer_name', 'qualification', 'title_rank', 'gender', 'cv_link']
@@ -57,3 +57,4 @@ class CourseAdmin(admin.ModelAdmin):
         
 admin.site.register(Lecturer, LecturerAdmin)
 admin.site.register(Course, CourseAdmin)
+admin.site.register(Student)
