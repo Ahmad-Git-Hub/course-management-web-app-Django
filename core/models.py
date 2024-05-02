@@ -35,3 +35,23 @@ class Course(models.Model):
 
     def __str__(self):
         return f"{self.course_name} ({self.course_id})"
+
+
+class Student(models.Model):
+    name = models.CharField(max_length=50, null=False, unique=True)
+    email = models.EmailField(max_length=255, unique=True)
+    phone_number = models.CharField(max_length=14, unique=True) 
+    PERSON_TYPE_CHOICES = [
+        ('ST', 'Student'),
+        ('EM', 'Employer'),
+        ('OT', 'Others'),
+    ]
+    student_type = models.CharField(
+        max_length=2,
+        choices=PERSON_TYPE_CHOICES,
+        default='OT',
+    )
+    courses = models.ManyToManyField(Course, blank=True)
+
+    def __str__(self):
+        return self.name
