@@ -3,6 +3,15 @@ from django.contrib import admin
 from .models import Lecturer, Course, Student
 from django.urls import reverse
 from django.utils.html import format_html
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
+
+class CustomUserAdmin(UserAdmin):
+    list_display = ('username', 'is_superuser', 'is_staff', 'is_active', 'date_joined')
+
+admin.site.unregister(User)
+admin.site.register(User, CustomUserAdmin)
+
 
 class LecturerAdmin(admin.ModelAdmin):
     list_display = ['lecturer_name', 'qualification', 'title_rank', 'gender', 'cv_link']
