@@ -52,6 +52,7 @@ class Student(models.Model):
         default='OT',
     )
     courses = models.ManyToManyField(Course, blank=False)
+    registration_date = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return self.name

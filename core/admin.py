@@ -1,6 +1,8 @@
 import datetime
 from django.contrib import admin
 from .models import Lecturer, Course, Student
+from django.urls import reverse
+from django.utils.html import format_html
 
 class LecturerAdmin(admin.ModelAdmin):
     list_display = ['lecturer_name', 'qualification', 'title_rank', 'gender', 'cv_link']
@@ -12,6 +14,7 @@ class CourseAdmin(admin.ModelAdmin):
 
     list_display = ['course_id', 'course_name', 'starting_date', 'price', 'creation_date','is_approved', 'lecturer', 'days_since_creation']
     actions = ['approve_courses', 'disapprove_courses']
+
 
     def approve_courses(self, request, queryset):
         queryset.update(is_approved=True)
@@ -51,10 +54,27 @@ class CourseAdmin(admin.ModelAdmin):
         return days
     
     days_since_creation.short_description = "Days Since Creation"
-  
+
+    def __str__(self):
+        return f"{self.course_name} ({self.course_id}, {self.starting_date}, {self.price})"
+
+
+
+class StudentAdmin(admin.ModelAdmin):
+    filter_horizontal = ('courses',)
+    list_display = ('name', 'email', 'phone_number', 'student_type', 'registration_date', 'view_courses_link')
+
+    def view_courses_link(self, obj):
+        url = reverse("admin:core_student_change", args=[obj.pk])
+        return format_html('<a href="{}">View Courses</a>', url)
+    view_courses_link.short_description = 'Courses'
 
 
         
 admin.site.register(Lecturer, LecturerAdmin)
 admin.site.register(Course, CourseAdmin)
-admin.site.register(Student)
+admin.site.register(Student, StudentAdmin)
+
+admin.site.site_header = "Continuous Education"
+admin.site.site_title = "CT Admin"
+admin.site.index_title = "Welcome Continuous Education manager"
