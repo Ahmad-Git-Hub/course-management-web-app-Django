@@ -29,7 +29,6 @@ class Course(models.Model):
     duration_days = models.IntegerField(blank=True, null=True)
     price = models.DecimalField(
         max_digits=7, decimal_places=0, blank=True, null=True)
-    poster = models.CharField(max_length=255, blank=True)
     lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
     is_approved = models.BooleanField(default=False)
 
