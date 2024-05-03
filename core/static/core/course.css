@@ -4,7 +4,7 @@
 }
 
 :root {
-  --primary-color: #36f4d8; 
+  --primary-color: whitesmoke; 
   --secondary-color: #579bd7; 
   --background-color: #2d1b56; 
   --border-color: #ddd; 
@@ -53,10 +53,11 @@
 /* Course Description */
 .description-container {
   padding: 15px;
-  background-color: var(--background-color);
+  background-color: #213170;
   color: var(--primary-color);
   flex: 1;
   flex-grow: 1;
+  color: whitesmoke;
 }
 
 /* Course Details */
