@@ -27,6 +27,7 @@
     {% for lecturer in lecturers %}
     <div class="grid-item">
         <div class="lecturer-name-div">
+           
             <p>{{ lecturer.lecturer_name }}</p>
         </div>
         <div class="lecturer-info-div">
@@ -34,6 +35,9 @@
             <p><strong>gender:</strong> {{ lecturer.get_gender_display }}</p>
             <p><strong>title:</strong> {{ lecturer.get_title_rank_display }}</p>
             <p><strong>qualification:</strong> {{ lecturer.qualification }}</p>
+            <a class= "link-to-lecturer-courses" href="{% url 'core-lecturer-course' lecturer.lecturer_name %}">
+                <p><strong>Courses:</strong> See lecturer courses here</p>
+            </a>
         </div>
     </div>
     {% endfor %}

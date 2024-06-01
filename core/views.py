@@ -2,7 +2,6 @@ from datetime import date
 from django.shortcuts import render, get_object_or_404
 from .models import Lecturer, Course
 
-
 def home(request):
     context = {'current_page': 'home'}
     return render(request, 'core/home.html', context)
@@ -37,3 +36,9 @@ def lecturer(request):
     return render(request, 'core/lecturer.html', context)
     
     
+def lecturer_course(request, lecturer_name):
+    today = date.today() 
+    courses = Course.objects.filter(starting_date__gt=today, is_approved=True, lecturer__lecturer_name=lecturer_name)
+    lecturer_name = request.GET.get('lecturer_name', None) 
+    context = {'current_page': 'lecturer_course', 'courses': courses, 'lecturer_name' : lecturer_name}
+    return render(request, 'core/lecturer_course.html', context)

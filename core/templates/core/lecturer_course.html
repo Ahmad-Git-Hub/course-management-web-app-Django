@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+
+{% if courses %}
+  <div class="grid-container">
+    {% for course in courses %}
+    <a class= "link-to-course" href="{% url 'core-course-detail' course.course_id %}">
+      <div class="grid-item">
+        <div class="description-container">
+          <h2 class="course-name">{{ course.course_name }}</h2>
+          <p class="course-lecturer"><strong>Lecturer: </strong>{{ course.lecturer}}</p>
+          <p class="course-date"><strong>Starting Date:</strong> {{ course.starting_date }}</p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="warning">No courses found!</p>
+{% endif %}
+{% endblock content %}
