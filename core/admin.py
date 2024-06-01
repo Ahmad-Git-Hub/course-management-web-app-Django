@@ -17,6 +17,12 @@ class LecturerAdmin(admin.ModelAdmin):
     list_display = ['lecturer_name', 'qualification', 'title_rank', 'gender', 'cv_link']
     ordering = ['title_rank']
 
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        if not request.user.is_superuser:
+            queryset = queryset.filter(id=request.user.id)
+        return queryset
+   
 
 
 class CourseAdmin(admin.ModelAdmin):
