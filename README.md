@@ -41,6 +41,8 @@ Administrators have access to a dashboard for managing lecturers, courses, and s
 
 ## Screenshots
 
+![Database_Relational_model](https://github.com/Ahmad-Git-Hub/course-management-web-app-Django/assets/138325384/9b641db3-b54f-4437-b465-cfe4ca73ff94)
+
 
 ![home_page](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/deddc72c-65ec-4415-96de-1f6e794dc237)
 
