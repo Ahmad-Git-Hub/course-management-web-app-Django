@@ -41,21 +41,12 @@ Administrators have access to a dashboard for managing lecturers, courses, and s
 
 ## Screenshots
 
-![Database_Relational_model](https://github.com/Ahmad-Git-Hub/course-management-web-app-Django/assets/138325384/9b641db3-b54f-4437-b465-cfe4ca73ff94)
+![Database Relational Model](images/database_relational_model.png)
 
-
-![home_page](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/deddc72c-65ec-4415-96de-1f6e794dc237)
-
-
-![courses](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/9ff85202-7763-4937-8bcf-35fa79aef6db)
-
-![course_desc](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/dd83cb54-0283-4bf3-8a58-c6ec8cf74608)
-
-![lecturers](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/bdc679ff-8e1a-443b-b591-15b0bf782764)
-
-![admin-home](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/e599959f-cb98-4798-9f9e-92275da29cde)
-
-![admin_core_course_](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/b98cc7d2-c161-46c4-9197-6ebd4dea2fb8)
-
-![admin_core_student_add](https://github.com/Ahmad-Git-Hub/django-course-management-web-app/assets/138325384/6a14d5c5-0d70-4bda-b1ea-4984ea770c40)
-
+![Home Page](images/home_page.png)
+![Courses](images/courses_page.png)
+![Course Description](images/course_details.png)
+![Lecturers](images/lecturers_page.png)
+![Admin Home](images/admin.png)
+![Admin Core Course](images/admin_course.png)
+![Admin Core Student Add](images/admin_student.png)
